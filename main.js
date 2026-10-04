@@ -117,12 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // CONTACT
   document.getElementById('contact-heading').textContent = content.contact.heading;
-  const contactActions = document.getElementById('contact-actions');
-  contactActions.innerHTML = `
-    <a href="mailto:${content.contact.email}" class="btn btn-massive">Email Me</a>
-    <a href="${content.contact.linkedin}" target="_blank" class="btn btn-massive">LinkedIn</a>
-    <a href="${content.contact.github}" target="_blank" class="btn btn-massive">GitHub</a>
-  `;
+  document.getElementById('contact-phone').textContent = content.contact.phone;
+  document.getElementById('contact-email').textContent = content.contact.email;
+  document.getElementById('contact-email-link').href = `mailto:${content.contact.email}`;
+  document.getElementById('contact-linkedin').href = content.contact.linkedin;
+  document.getElementById('contact-github').href = content.contact.github;
 
   // BACKGROUND PARALLAX
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

@@ -137,7 +137,7 @@ export const content = {
     ]
   },
   contact: {
-    heading: "Let's Build Together",
+    heading: "Contact Me",
     email: "dasorpita100@gmail.com",
     phone: "+91-8777390784",
     github: "https://github.com/dasorpita100",
