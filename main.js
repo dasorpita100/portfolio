@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const commEl = document.getElementById('about-comm');
   commEl.innerHTML = `<h3 class="bento-header">Communication</h3>`;
   content.achievements.filter(ach => ach.type === 'communication').forEach(ach => {
-    commEl.innerHTML += `<div class="comm-item"><strong>${ach.title}</strong><br><span>${ach.desc}</span></div>`;
+    commEl.innerHTML += `<div class="comm-item"><strong>${ach.title}</strong><br><span>${ach.shortDesc || ach.desc}</span></div>`;
   });
 
   // Leadership
@@ -60,7 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="proj-outcome">${proj.outcome}</p>
           <p class="proj-preview mt-16">${proj.preview}</p>
           <div class="chips-container mt-24">${chips}</div>
-          <button class="btn btn-primary mt-32" onclick="alert('Case study full layout opens here')">View Details</button>
+          <div class="mt-32" style="display: flex; gap: 16px;">
+            <button class="btn btn-primary" onclick="window.openModal('${proj.id}')">View Details</button>
+            ${proj.github !== '#' ? `<a href="${proj.github}" target="_blank" class="btn"><i class="fab fa-github" style="margin-right: 8px;"></i> GitHub</a>` : ''}
+          </div>
         </div>
       </div>
     `;
@@ -80,6 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="exp-right glow-card">
           ${bullets}
         </div>
+      </div>
+    `;
+  });
+
+  // CERTIFICATES
+  const certList = document.getElementById('certificates-list');
+  content.certifications.forEach(cert => {
+    certList.innerHTML += `
+      <div class="cert-item">
+        <div>
+          <div class="cert-meta"><i class="fas fa-award"></i> Certification</div>
+          <h3 class="cert-title">${cert.title}</h3>
+        </div>
+        ${cert.file ? `<a href="${cert.file}" target="_blank" class="cert-link">View Credential <i class="fas fa-arrow-right" style="font-size: 0.8em;"></i></a>` : ''}
       </div>
     `;
   });
@@ -196,4 +213,69 @@ document.addEventListener('DOMContentLoaded', () => {
     .fromTo('.stat-item', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.2, stagger: 0.1 })
     .fromTo('.hero-actions .btn', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.2, stagger: 0.1 }, "-=0.2")
     .fromTo('.visual-mesh', { opacity: 0, scale: 0.8 }, { opacity: 0.5, scale: 1, duration: 0.8, ease: "power2.out" }, 0);
+});
+
+// MODAL LOGIC
+window.openModal = function(projectId) {
+  const modal = document.getElementById('project-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalBody = document.getElementById('modal-body');
+  
+  const proj = content.projects.items.find(p => p.id === projectId);
+  if (!proj) return;
+  
+  modalTitle.textContent = proj.title;
+  let html = '';
+  
+  if (proj.details) {
+    if (proj.stats) {
+      let statsHtml = '<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">';
+      proj.stats.forEach(stat => {
+        statsHtml += `<div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; flex: 1; min-width: 120px;">
+          <div style="font-size: 1.5em; font-weight: bold; color: var(--color-primary);">${stat.value}</div>
+          <div style="font-size: 0.9em; color: var(--color-text-muted);">${stat.label}</div>
+        </div>`;
+      });
+      statsHtml += '</div>';
+      html += statsHtml;
+    }
+    
+    if (proj.details.overview) html += `<div class="modal-body-section"><h4>Overview</h4><p>${proj.details.overview}</p></div>`;
+    if (proj.details.problem) html += `<div class="modal-body-section"><h4>Problem Statement</h4><p>${proj.details.problem}</p></div>`;
+    if (proj.details.solution) html += `<div class="modal-body-section"><h4>The Solution</h4><p>${proj.details.solution}</p></div>`;
+    if (proj.details.howItWorks) html += `<div class="modal-body-section"><h4>How it works</h4><ul>${proj.details.howItWorks.map(i => `<li>${i}</li>`).join('')}</ul></div>`;
+    if (proj.details.features) html += `<div class="modal-body-section"><h4>Features</h4><ul>${proj.details.features.map(i => `<li>${i}</li>`).join('')}</ul></div>`;
+    if (proj.details.prototype) html += `<div class="modal-body-section"><h4>Interactive Prototype</h4><p>${proj.details.prototype}</p></div>`;
+    if (proj.details.evidence) html += `<div class="modal-body-section"><h4>Key Findings</h4><ul>${proj.details.evidence.map(i => `<li>${i}</li>`).join('')}</ul></div>`;
+    if (proj.details.implementation) html += `<div class="modal-body-section"><h4>Implementation Plan</h4><ol>${proj.details.implementation.map(i => `<li>${i}</li>`).join('')}</ol></div>`;
+    if (proj.details.benefits) html += `<div class="modal-body-section"><h4>Expected Benefits</h4><ul>${proj.details.benefits.map(i => `<li>${i}</li>`).join('')}</ul></div>`;
+    if (proj.details.limitations) html += `<div class="modal-body-section" style="border: 1px dashed var(--color-border); padding: 16px; border-radius: 8px;"><h4>What this does not show</h4><ul>${proj.details.limitations.map(i => `<li>${i}</li>`).join('')}</ul></div>`;
+    if (proj.details.stack) html += `<div class="modal-body-section"><h4>Tech Stack</h4><p>${proj.details.stack}</p></div>`;
+  } else {
+    // Fallback for projects that don't have the new detailed structure yet
+    html += `<div class="modal-body-section"><h4>Implementation</h4><p>${proj.built}</p></div>`;
+    html += `<div class="modal-body-section"><h4>Results</h4><p>${proj.result}</p></div>`;
+  }
+
+  modalBody.innerHTML = html;
+  modal.classList.add('show');
+  document.body.style.overflow = 'hidden'; // prevent scrolling
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('project-modal');
+  const closeModal = document.querySelector('.close-modal');
+  
+  if (closeModal && modal) {
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+    });
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 });
