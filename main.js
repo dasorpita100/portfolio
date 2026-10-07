@@ -105,11 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const achList = document.getElementById('achievements-list');
   content.achievements.forEach(ach => {
     achList.innerHTML += `
-      <div class="project-card glow-card" style="padding: 24px; position: relative;">
-        ${ach.date ? `<div class="exp-meta" style="position: absolute; right: 24px; top: 24px;">${ach.date}</div>` : ''}
-        <h3 style="margin-bottom: 8px; padding-right: 80px;">${ach.title}</h3>
+      <div class="project-card glow-card" style="padding: 24px;">
+        <h3 style="margin-bottom: 8px;">${ach.title}</h3>
         <p style="color: var(--color-text-muted);">${ach.desc}</p>
-        ${ach.file ? `<div style="margin-top: 16px;"><a href="${ach.file}" target="_blank" class="cert-link">View Credential <i class="fas fa-arrow-right" style="font-size: 0.8em;"></i></a></div>` : ''}
       </div>
     `;
   });

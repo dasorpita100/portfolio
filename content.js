@@ -234,9 +234,7 @@ export const content = {
   achievements: [
     { 
       title: "<strong>Semi-finalist</strong>, 3rd SMART CITY 2030 International Competition (BRICS)", 
-      date: "Oct 2026",
       desc: "Awarded Diploma of the Semi-Finalist by <strong>Peter the Great St. Petersburg Polytechnic University</strong> (Russia), with Lovely Professional University, Tsinghua University and the Federal University of Rio de Janeiro. Team Leader of Team RiskVision mapping heat vulnerability across all 38 wards of Nagpur, India (Track 2: Safe and Comfortable Urban Environment). International final: Moscow, Tech Science Forum 2026.", 
-      file: "/certificates/smart_city_2030_semi_finalist.pdf",
       type: "competition" 
     },
     { title: "<strong>1st Position</strong>, Debate Competition", desc: "Secured 1st position at the Spectra Inter-School Fest (Feb 2026), a highly competitive inter-school event featuring hundreds of participants from top schools across the region. Demonstrated exceptional analytical thinking and public speaking skills across multiple rigorous rounds.", shortDesc: "Secured 1st position at the Spectra Inter-School Fest (Feb 2026).", type: "communication" },
@@ -253,7 +251,7 @@ export const content = {
         degree: "Bachelor of Technology - Computer Science and Engineering",
         institution: "Lovely Professional University",
         location: "Phagwara, Punjab",
-        duration: "Since Aug 2023",
+        duration: "Aug 2023 - Present",
         gpa: "CGPA: 8.51"
       },
       {
