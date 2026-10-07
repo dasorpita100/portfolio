@@ -223,6 +223,7 @@ export const content = {
     }
   },
   certifications: [
+    { title: "Diploma of the Semi-Finalist: SMART CITY 2030 (BRICS) - Peter the Great St. Petersburg Polytechnic University", file: "/certificates/smart_city_2030_semi_finalist.pdf" },
     { title: "Master Generative AI & Tools - Infosys", file: "/certificates/infosys_master_genai.pdf" },
     { title: "ChatGPT-4 Prompt Engineering - Infosys", file: "/certificates/infosys_chatgpt4.pdf" },
     { title: "Privacy & Security - NPTEL", file: "/certificates/nptel_privacy.pdf" },
@@ -231,7 +232,13 @@ export const content = {
     { title: "Intro to AI: A Beginner's Guide to Artificial Intelligence - Udemy", file: "/certificates/udemy_intro_to_ai.pdf" }
   ],
   achievements: [
-    { title: "<strong>Semi-finalist</strong>, 3rd SMART CITY 2030 International Competition (BRICS)", desc: "Organised by <strong>Peter the Great St. Petersburg Polytechnic University</strong> (Russia), with Lovely Professional University, Tsinghua University and the Federal University of Rio de Janeiro. Team Leader of Team RiskVision mapping heat vulnerability across all 38 wards of Nagpur, India (Track 2: Safe and Comfortable Urban Environment). International final: Moscow, Tech Science Forum 2026.", type: "competition" },
+    { 
+      title: "<strong>Semi-finalist</strong>, 3rd SMART CITY 2030 International Competition (BRICS)", 
+      date: "Oct 2026",
+      desc: "Awarded Diploma of the Semi-Finalist by <strong>Peter the Great St. Petersburg Polytechnic University</strong> (Russia), with Lovely Professional University, Tsinghua University and the Federal University of Rio de Janeiro. Team Leader of Team RiskVision mapping heat vulnerability across all 38 wards of Nagpur, India (Track 2: Safe and Comfortable Urban Environment). International final: Moscow, Tech Science Forum 2026.", 
+      file: "/certificates/smart_city_2030_semi_finalist.pdf",
+      type: "competition" 
+    },
     { title: "<strong>1st Position</strong>, Debate Competition", desc: "Secured 1st position at the Spectra Inter-School Fest (Feb 2026), a highly competitive inter-school event featuring hundreds of participants from top schools across the region. Demonstrated exceptional analytical thinking and public speaking skills across multiple rigorous rounds.", shortDesc: "Secured 1st position at the Spectra Inter-School Fest (Feb 2026).", type: "communication" },
     { title: "<strong>Runner-Up</strong>, Debate Competition", desc: "Awarded Runner-Up at Edu Revolution (Apr 2025), a premier inter-school competition that drew a huge amount of participants and large audiences. Showcased strong persuasive communication and argumentative reasoning while debating complex contemporary global issues.", shortDesc: "Awarded Runner-Up at Edu Revolution (Apr 2025).", type: "communication" }
   ],

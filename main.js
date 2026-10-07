@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ${ach.date ? `<div class="exp-meta" style="position: absolute; right: 24px; top: 24px;">${ach.date}</div>` : ''}
         <h3 style="margin-bottom: 8px; padding-right: 80px;">${ach.title}</h3>
         <p style="color: var(--color-text-muted);">${ach.desc}</p>
+        ${ach.file ? `<div style="margin-top: 16px;"><a href="${ach.file}" target="_blank" class="cert-link">View Credential <i class="fas fa-arrow-right" style="font-size: 0.8em;"></i></a></div>` : ''}
       </div>
     `;
   });
