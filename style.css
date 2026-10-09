@@ -217,10 +217,16 @@ nav { padding: var(--space-24) var(--space-48); display: flex; justify-content: 
 .hidden-desktop { display: none; }
 .btn-link { background: none; border: none; color: var(--color-accent-warm); cursor: pointer; padding: 0; font-size: 1rem; text-decoration: underline; }
 
+/* Achievement Cards */
+.ach-card .ach-icon { display: flex; align-items: flex-start; justify-content: flex-start; font-size: 2.2rem; color: #f5a623; }
+.ach-card .proj-content h3 { font-size: var(--text-h3); margin-bottom: var(--space-12); color: var(--color-text); line-height: 1.35; }
+.ach-card .proj-content p { color: var(--color-text-muted); line-height: 1.7; font-size: 1rem; }
+
 @media (max-width: 768px) {
   .collapsible-mobile { display: none; }
   .collapsible-mobile.expanded { display: block; }
   .hidden-desktop { display: inline-block; }
+  .ach-card .ach-icon { display: block; font-size: 1.8rem; margin-bottom: var(--space-12); }
 }
 
 /* Card Border Glow */

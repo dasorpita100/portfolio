@@ -4,7 +4,8 @@ export const content = {
     title: "Data Science Major & AI Developer",
     stats: [
       { label: "CGPA", value: "8.51" },
-      { label: "Problems Solved", value: "100+" }
+      { label: "Problems Solved", value: "100+" },
+      { label: "SMART CITY 2030", value: "1st Place" }
     ]
   },
   about: {
@@ -43,12 +44,13 @@ export const content = {
         id: "proj-smartcity",
         number: "01",
         title: "Nagpur Heat Vulnerability Index",
-        outcome: "Mapping who is most at risk from extreme heat, ward by ward. Semi-finalist project for SMART CITY 2030 (BRICS).",
-        preview: "The first ward-level heat vulnerability index for Nagpur's 38 wards, built from open satellite and municipal data. Team Leader of Team RiskVision.",
-        built: "Led a two-student team to a semi-final place at the SMART CITY 2030 BRICS competition, building a ward-level heat vulnerability index for Nagpur's 38 wards from 11 years of Landsat data.",
+        outcome: "1st Place Winner (1st Degree) out of 391 international teams at the III International SMART CITY 2030 Competition (BRICS+), Moscow.",
+        preview: "The first ward-level heat vulnerability index for Nagpur's 38 wards, built from 11 years of Landsat and municipal data. Awarded 1st Place in Nomination 2 (Safe & Comfortable Urban Environment) at the BRICS+ finals in Moscow.",
+        built: "Led data modeling and geospatial research representing Lovely Professional University for the winning project 'Ward-Level Urban Heat-Vulnerability Mapping for Nagpur, India: Transferring the Ahmedabad Heat-Action Benchmark to a BRICS City'. Won 1st Place (1st Degree Award) out of 391 teams in Nomination 2 (Safe and Comfortable Urban Environment) at the 3rd International SMART CITY 2030 Competition finals at the Lomonosov Cluster in Moscow (BRICS+ TechnoScientific Educational Forum).",
         tech: ["Geospatial", "Data Science", "PCA", "Urban Climate", "Python"],
-        result: "Track 2: Safe and Comfortable Urban Environment",
+        result: "1st Place Winner (1st Degree Award) — Nomination 2: Safe and Comfortable Urban Environment (Out of 391 International Teams)",
         stats: [
+          { value: "1st Place", label: "Winner (out of 391 international teams)" },
           { value: "38", label: "wards ranked" },
           { value: "11 yrs", label: "of Landsat summer data (2015–2025)" },
           { value: "6", label: "indicators, weighted by PCA" },
@@ -56,8 +58,9 @@ export const content = {
           { value: "-0.18", label: "correlation: hottest is not most vulnerable" }
         ],
         details: {
+          overview: "Awarded 1st Place (1st Degree Award) in Nomination 2 ('Safe and comfortable urban environment') at the III International SMART CITY 2030 Competition: Sustainable Cities Management in the BRICS Countries. The finals and awards ceremony took place on October 6, 2026, at the Lomonosov Cluster (MSU Vorobyovy Gory Scientific and Technical Center) in Moscow as part of the BRICS+ TechnoScientific Educational Forum. Co-developed and presented by Orpita Das, Rajvardhan Singh, and Dr. Shilpa Sharma representing Lovely Professional University (LPU), the project was selected as the 1st Place winner among 391 participating teams across BRICS+ countries.",
           problem: "Nagpur has 2.45 million residents in 38 wards. Its Heat Action Plan began in 2025–26, but no ward-level vulnerability map had been published. Temperature alone can send help to the hottest wards instead of the ones where vulnerable people live.",
-          solution: "To our knowledge, Nagpur's first ward-level Heat Vulnerability Index (HVI): one score per ward from heat exposure, social sensitivity and adaptive-capacity deficit, built on Nagpur's own data.",
+          solution: "To our knowledge, Nagpur's first ward-level Heat Vulnerability Index (HVI): transferring benchmark heat-action frameworks to a BRICS city by calculating a composite score per ward from heat exposure, social sensitivity and adaptive-capacity deficit, built on Nagpur's own data.",
           howItWorks: [
             "Six indicators: summer land surface temperature, built-up intensity, impervious fraction, population density, SC/ST population share and vegetation deficit.",
             "Data from Landsat (2015–2025), ESA WorldCover, WorldPop and Nagpur Municipal Corporation 2025 ward data.",
@@ -65,6 +68,7 @@ export const content = {
             "Results are compared with three alternative weighting methods for validation."
           ],
           evidence: [
+            "Awarded 1st Place internationally out of 391 teams by an international expert jury representing Peter the Great St. Petersburg Polytechnic University (Russia), Lovely Professional University (India), Tsinghua University (China), and UFRJ (Brazil), evaluated on innovativeness, feasibility, AI/digital technology application, and scalability in BRICS+ cities.",
             "Vulnerability clusters in the dense core: Ward 20 (Itwari market district) scores 0.81, the green Ward 14 scores 0.07.",
             "986,625 residents (40%) live in High and Very-High wards; the ten most vulnerable wards hold 669,528 (27%).",
             "Hottest is not most vulnerable (Spearman ρ = −0.18): a temperature-only map would send help to the wrong places.",
@@ -223,7 +227,7 @@ export const content = {
     }
   },
   certifications: [
-    { title: "Diploma of the Semi-Finalist: SMART CITY 2030 (BRICS) - Peter the Great St. Petersburg Polytechnic University", file: "/certificates/smart_city_2030_semi_finalist.pdf" },
+    { title: "1st Place Winner (1st Degree) & Finalist: SMART CITY 2030 (BRICS+) - Peter the Great St. Petersburg Polytechnic University & LPU", file: "/certificates/smart_city_2030_semi_finalist.pdf" },
     { title: "Master Generative AI & Tools - Infosys", file: "/certificates/infosys_master_genai.pdf" },
     { title: "ChatGPT-4 Prompt Engineering - Infosys", file: "/certificates/infosys_chatgpt4.pdf" },
     { title: "Privacy & Security - NPTEL", file: "/certificates/nptel_privacy.pdf" },
@@ -233,15 +237,15 @@ export const content = {
   ],
   achievements: [
     { 
-      title: "<strong>Semi-finalist</strong>, 3rd SMART CITY 2030 International Competition (BRICS)", 
-      desc: "Awarded Diploma of the Semi-Finalist by <strong>Peter the Great St. Petersburg Polytechnic University</strong> (Russia), with Lovely Professional University, Tsinghua University and the Federal University of Rio de Janeiro. Team Leader of Team RiskVision mapping heat vulnerability across all 38 wards of Nagpur, India (Track 2: Safe and Comfortable Urban Environment). International final: Moscow, Tech Science Forum 2026.", 
+      title: "<strong>1st Place Winner (1st Degree)</strong>, III International SMART CITY 2030 Competition (BRICS+)", 
+      desc: "Won <strong>1st Place (1st Degree Award)</strong> in Nomination 2: <em>Safe and comfortable urban environment</em> out of <strong>391 international participating teams</strong>. The finals and awards ceremony took place on October 6, 2026, at the Lomonosov Cluster (MSU Vorobyovy Gory Scientific and Technical Center, Moscow) as part of the BRICS+ TechnoScientific Educational Forum. The competition was organized via an international partnership of Peter the Great St. Petersburg Polytechnic University (Russia), Lovely Professional University (India), Tsinghua University (China), and UFRJ (Brazil). Project: <em>'Ward-Level Urban Heat-Vulnerability Mapping for Nagpur, India: Transferring the Ahmedabad Heat-Action Benchmark to a BRICS City'</em>, co-developed with Rajvardhan Singh and Dr. Shilpa Sharma.", 
       type: "competition" 
     },
-    { title: "<strong>1st Position</strong>, Debate Competition", desc: "Secured 1st position at the Spectra Inter-School Fest (Feb 2026), a highly competitive inter-school event featuring hundreds of participants from top schools across the region. Demonstrated exceptional analytical thinking and public speaking skills across multiple rigorous rounds.", shortDesc: "Secured 1st position at the Spectra Inter-School Fest (Feb 2026).", type: "communication" },
+    { title: "<strong>3rd Position</strong>, Debate Competition", desc: "Secured 3rd position at the Spectra Inter-School Fest (Feb 2026), a highly competitive inter-school event featuring hundreds of participants from top schools across the region. Demonstrated exceptional analytical thinking and public speaking skills across multiple rigorous rounds.", shortDesc: "Secured 3rd position at the Spectra Inter-School Fest (Feb 2026).", type: "communication" },
     { title: "<strong>Runner-Up</strong>, Debate Competition", desc: "Awarded Runner-Up at Edu Revolution (Apr 2025), a premier inter-school competition that drew a huge amount of participants and large audiences. Showcased strong persuasive communication and argumentative reasoning while debating complex contemporary global issues.", shortDesc: "Awarded Runner-Up at Edu Revolution (Apr 2025).", type: "communication" }
   ],
   leadership: [
-    { title: "Project Lead", desc: "Led Team RiskVision to the SMART CITY 2030 BRICS semi-finals, spearheading the development of Nagpur's ward-level heat vulnerability index." },
+    { title: "Project Lead & Co-Researcher", desc: "Led data modeling and geospatial research for the Nagpur Heat Vulnerability project, guiding the team to 1st Place victory (out of 391 teams) at the III International SMART CITY 2030 BRICS+ competition finals in Moscow." },
     { title: "Class Representative", desc: "Acted as the primary liaison between students and faculty, organizing academic initiatives and streamlining departmental communications." }
   ],
   education: {

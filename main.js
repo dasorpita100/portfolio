@@ -104,10 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // ACHIEVEMENTS
   const achList = document.getElementById('achievements-list');
   content.achievements.forEach(ach => {
+    const iconClass = ach.type === 'competition' ? 'fa-trophy' : 'fa-award';
     achList.innerHTML += `
-      <div class="project-card glow-card" style="padding: 24px;">
-        <h3 style="margin-bottom: 8px;">${ach.title}</h3>
-        <p style="color: var(--color-text-muted);">${ach.desc}</p>
+      <div class="project-card glow-card ach-card">
+        <div class="proj-number ach-icon">
+          <i class="fas ${iconClass}"></i>
+        </div>
+        <div class="proj-content">
+          <h3>${ach.title}</h3>
+          <p>${ach.desc}</p>
+        </div>
       </div>
     `;
   });
