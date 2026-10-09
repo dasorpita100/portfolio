@@ -227,13 +227,13 @@ export const content = {
     }
   },
   certifications: [
-    { title: "1st Place Winner (1st Degree) & Finalist: SMART CITY 2030 (BRICS+) - Peter the Great St. Petersburg Polytechnic University & LPU", file: "/certificates/smart_city_2030_semi_finalist.pdf" },
-    { title: "Master Generative AI & Tools - Infosys", file: "/certificates/infosys_master_genai.pdf" },
-    { title: "ChatGPT-4 Prompt Engineering - Infosys", file: "/certificates/infosys_chatgpt4.pdf" },
-    { title: "Privacy & Security - NPTEL", file: "/certificates/nptel_privacy.pdf" },
-    { title: "Data Structures Algorithms - CipherSchools", file: "/certificates/cipher_schools_dsa.pdf" },
-    { title: "Generative AI for Beginners - Udemy", file: "/certificates/udemy_generative_ai.pdf" },
-    { title: "Intro to AI: A Beginner's Guide to Artificial Intelligence - Udemy", file: "/certificates/udemy_intro_to_ai.pdf" }
+    { title: "1st Place Winner (1st Degree) & Finalist: SMART CITY 2030 (BRICS+) - Peter the Great St. Petersburg Polytechnic University & LPU", file: "./certificates/smart_city_2030_semi_finalist.pdf" },
+    { title: "Master Generative AI & Tools - Infosys", file: "./certificates/infosys_master_genai.pdf" },
+    { title: "ChatGPT-4 Prompt Engineering - Infosys", file: "./certificates/infosys_chatgpt4.pdf" },
+    { title: "Privacy & Security - NPTEL", file: "./certificates/nptel_privacy.pdf" },
+    { title: "Data Structures Algorithms - CipherSchools", file: "./certificates/cipher_schools_dsa.pdf" },
+    { title: "Generative AI for Beginners - Udemy", file: "./certificates/udemy_generative_ai.pdf" },
+    { title: "Intro to AI: A Beginner's Guide to Artificial Intelligence - Udemy", file: "./certificates/udemy_intro_to_ai.pdf" }
   ],
   achievements: [
     { 
