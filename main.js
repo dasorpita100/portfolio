@@ -216,8 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .fromTo('#hero-name', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 })
     .fromTo('#hero-title', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 })
     .fromTo('.stat-item', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.2, stagger: 0.1 })
-    .fromTo('.hero-actions .btn', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.2, stagger: 0.1 }, "-=0.2")
-    .fromTo('.visual-mesh', { opacity: 0, scale: 0.8 }, { opacity: 0.5, scale: 1, duration: 0.8, ease: "power2.out" }, 0);
+    .fromTo('.visual-mesh', { opacity: 0, scale: 0.8 }, { opacity: 0.45, scale: 1, duration: 0.8, ease: "power2.out" }, 0)
+    .fromTo('.hero-image-wrapper', { opacity: 0, scale: 0.95, y: 15 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.4");
 });
 
 // MODAL LOGIC
